@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 // Import the firebase_core plugin
 import 'package:firebase_core/firebase_core.dart';
+import 'package:quizapp/routes.dart';
+import 'package:quizapp/theme.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +39,10 @@ class _AppState extends State<App> {
 
         // Once complete, show your application
         if (snapshot.connectionState == ConnectionState.done) {
-          return MaterialApp();
+          return MaterialApp(
+            routes: appRoutes,
+            theme: appTheme,
+          );
         }
 
         // Otherwise, show something whilst waiting for initialization to complete

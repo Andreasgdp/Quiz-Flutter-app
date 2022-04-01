@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quizapp/services/services.dart';
+import 'package:quizapp/shared/loading.dart';
 import 'package:quizapp/shared/shared.dart';
-import 'package:quizapp/topics/topic_item.dart';
+import 'package:quizapp/topics/drawer.dart';
+import 'package:quizapp/topics/topics_item.dart';
 
 class TopicsScreen extends StatelessWidget {
   const TopicsScreen({Key? key}) : super(key: key);
@@ -22,6 +24,7 @@ class TopicsScreen extends StatelessWidget {
           var topics = snapshot.data!;
 
           return Scaffold(
+            drawer: TopicDrawer(topics: topics),
             appBar: AppBar(
               backgroundColor: Colors.deepPurple,
               title: const Text('Topics'),

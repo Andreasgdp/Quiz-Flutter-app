@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:quizapp/services/services.dart';
-import 'package:quizapp/shared/loading.dart';
 import 'package:quizapp/shared/shared.dart';
 import 'package:quizapp/topics/drawer.dart';
 import 'package:quizapp/topics/topics_item.dart';
